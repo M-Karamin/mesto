@@ -7,6 +7,11 @@
     color: #fff;
     cursor: pointer;
     border-radius: 2px;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 22px;
+    text-align: center;
 }
 
 .popup__input-button-save:hover {
@@ -17,5 +22,9 @@
 @media screen and (max-width: 600px) {
     .popup__input-button-save {
         width: 238px;
+        height: 46px;
+        margin-top: 45px;
+        font-size: 14px;
+        line-height: 17px;
     }
 }
