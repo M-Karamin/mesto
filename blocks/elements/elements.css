@@ -1,0 +1,14 @@
+.elements {
+    width: 68.75%;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(282px, 1fr));
+    gap: 17px;
+}
+
+@media screen and (max-width: 600px) {
+    .elements {
+        width: 88%;
+    }
+}
+
