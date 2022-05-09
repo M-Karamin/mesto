@@ -7,29 +7,23 @@ let nameInput = document.querySelector(".popup__input-name");
 let jobInput = document.querySelector(".popup__input-profession");
 let title = document.querySelector(".profile__title");
 let text = document.querySelector(".profile__text");
-nameInput.value = title.textContent
-jobInput.value = text.textContent
 
-profilebtn.addEventListener("click", function (event) {
-    popup.classList.add("popup_active")
-});
+function Click(){
+    popup.classList.toggle("popup_active")
+}
 
-popupClosebtn.addEventListener("click", function(event) {
-    popup.classList.remove("popup_active")
-  
-});
+profilebtn.addEventListener("click", Click)
+    nameInput.value = title.textContent
+    jobInput.value = text.textContent
+;
 
-popupSavebtn.addEventListener("click", function(event) {    
-    formSubmitHandler(event);
-    popup.classList.remove("popup_active")
-    
-});
+popupClosebtn.addEventListener("click", Click);
 
 function formSubmitHandler (event) {
     event.preventDefault();
     title.textContent = nameInput.value
     text.textContent = jobInput.value
-
+    popupSavebtn.addEventListener("click", Click)
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
