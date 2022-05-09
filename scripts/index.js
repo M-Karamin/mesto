@@ -21,9 +21,9 @@ popupClosebtn.addEventListener("click", Click);
 
 function formSubmitHandler (event) {
     event.preventDefault();
-    title.textContent = nameInput.value
-    text.textContent = jobInput.value
-    popupSavebtn.addEventListener("click", Click)
+    title.textContent = nameInput.value;
+    text.textContent = jobInput.value;
+    Click();
 }
 
 formElement.addEventListener('submit', formSubmitHandler);
