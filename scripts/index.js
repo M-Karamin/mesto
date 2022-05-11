@@ -8,22 +8,23 @@ let jobInput = document.querySelector(".popup__input-profession");
 let title = document.querySelector(".profile__title");
 let text = document.querySelector(".profile__text");
 
-function Click(){
+function popupToggle(){
     popup.classList.toggle("popup_active")
+    if (popup.classList.contains("popup_active") == true) {
+        nameInput.value = title.textContent;
+        jobInput.value = text.textContent;
+    };
 }
-
-profilebtn.addEventListener("click", Click)
-    nameInput.value = title.textContent
-    jobInput.value = text.textContent
-;
-
-popupClosebtn.addEventListener("click", Click);
 
 function formSubmitHandler (event) {
     event.preventDefault();
     title.textContent = nameInput.value;
     text.textContent = jobInput.value;
-    Click();
+    popupToggle();
 }
+
+profilebtn.addEventListener("click", popupToggle)
+
+popupClosebtn.addEventListener("click", popupToggle);
 
 formElement.addEventListener('submit', formSubmitHandler);

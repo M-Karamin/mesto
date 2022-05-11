@@ -11,5 +11,7 @@
     .profile__info {
         padding: 0;
         justify-content: center;
+        max-width: 282px;
+        text-align: center;
     }
 }
